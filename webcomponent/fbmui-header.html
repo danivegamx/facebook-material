@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+
+<dom-module id="fbmui-header">
+  <template>
+    <p>Hola, <strong> {{who}} </strong></p>
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is : 'fbmui-header',
+    properties: {
+      who : {
+        type : String,
+        value : "Ing Dani Vega"
+      }
+    }
+  })
+</script>
