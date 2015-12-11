@@ -1,22 +1,18 @@
 {
-  "name": "facebook-polymer",
-  "homepage": "https://github.com/danivegamx/facebook-material",
-  "authors": [
-    "danivegamx"
-  ],
-  "description": "A responsive UI for Facebook main timeline using Material Design, Polymer and WebComponents",
-  "main": "",
-  "moduleType": [],
-  "license": "MIT",
+  "name": "polymer-starter-kit",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
-    "polymer": "~1.2.3"
+    "iron-elements": "PolymerElements/iron-elements#^1.0.0",
+    "neon-elements": "PolymerElements/neon-elements#^1.0.0",
+    "page": "visionmedia/page.js#~1.6.4",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.1",
+    "platinum-elements": "PolymerElements/platinum-elements#^1.1.0",
+    "polymer": "Polymer/polymer#^1.2.0",
+    "paper-menu": "PolymerElements/paper-menu#4fecb43601"
+  },
+  "devDependencies": {},
+  "ignore": [],
+  "resolutions": {
+    "paper-menu": "4fecb43601"
   }
 }
