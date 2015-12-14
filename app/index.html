@@ -46,6 +46,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild-->
 
+  <!-- customstyles:css styles/custom.css -->
+  <link rel="stylesheet" href="styles/custom.css">
+  <!-- endcustomstyles-->
+
   <!-- build:js bower_components/webcomponentsjs/webcomponents-lite.min.js -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <!-- endbuild -->
@@ -64,55 +68,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template is="dom-bind" id="app">
 
     <paper-drawer-panel id="paperDrawerPanel">
-      <!-- Drawer Scroll Header Panel -->
-      <paper-scroll-header-panel drawer fixed>
-
-        <!-- Drawer Toolbar -->
-        <paper-toolbar id="drawerToolbar">
-          <span class="paper-font-title">Menu</span>
-        </paper-toolbar>
-
-        <!-- Drawer Content -->
-        <paper-menu class="list" attr-for-selected="data-route" selected="[[route]]">
-          <a data-route="home" href="{{baseUrl}}">
-            <iron-icon icon="home"></iron-icon>
-            <span>Home</span>
-          </a>
-
-          <a data-route="users" href="{{baseUrl}}users">
-            <iron-icon icon="info"></iron-icon>
-            <span>Users</span>
-          </a>
-
-          <a data-route="contact" href="{{baseUrl}}contact">
-            <iron-icon icon="mail"></iron-icon>
-            <span>Contact</span>
-          </a>
-        </paper-menu>
-      </paper-scroll-header-panel>
 
       <!-- Main Area -->
       <paper-scroll-header-panel main id="headerPanelMain" condenses keep-condensed-header>
 
         <!-- Main Toolbar -->
-        <paper-toolbar id="mainToolbar" class="tall">
-          <paper-icon-button id="paperToggle" icon="menu" paper-drawer-toggle></paper-icon-button>
-          <span class="flex"></span>
-
-          <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
-          <paper-icon-button icon="search"></paper-icon-button>
-
-          <!-- Application name -->
-          <div class="middle middle-container center horizontal layout">
-            <div class="app-name">Polymer Starter Kit</div>
+        <paper-toolbar id="mainToolbar">
+          <div class="custom-fb-icon"></div>
+          <div class="title custom-override">
+            <paper-input label="Search" class="custom-title-searchinput"></paper-input>
           </div>
-
-          <!-- Application sub title -->
-          <div class="bottom bottom-container center horizontal layout">
-            <div class="bottom-title paper-font-subhead">The future of the web today</div>
-          </div>
-
+          <paper-icon-button icon="more-vert" on-tap="moreAction"></paper-icon-button>
         </paper-toolbar>
 
         <!-- Main Content -->
@@ -181,6 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           </iron-pages>
         </div>
       </paper-scroll-header-panel>
+      
     </paper-drawer-panel>
 
     <paper-toast id="toast">

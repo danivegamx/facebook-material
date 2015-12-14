@@ -34,7 +34,8 @@
   "scripts": {
     "test": "gulp test:local",
     "start": "gulp serve",
-    "lint": "gulp lint"
+    "lint": "gulp lint",
+    "stylus" : "stylus -u nib -c -w -o app/styles/custom.css stylus/master.styl"
   },
   "engines": {
     "node": ">=0.10.0"
